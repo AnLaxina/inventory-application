@@ -40,7 +40,3 @@ export async function updateDeveloper(id, name, headquarters = undefined) {
 
     await pool.query(query, [id, name, headquarters]);
 }
-
-// addDeveloper("Chicken Company", "Cheese Land");
-removeDeveloper(1);
-updateDeveloper(2, "New Chicken");
