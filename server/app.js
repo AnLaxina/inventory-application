@@ -1,6 +1,10 @@
-import Express from "express";
+import express from "express";
+import cors from "cors";
 
-const app = Express();
+const app = express();
+// Setup for allowing React to communicate and making req.body work
+app.use(cors());
+app.use(express.json());
 const PORT = 3000;
 
 app.listen(PORT, (error) => {
