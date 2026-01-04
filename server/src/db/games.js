@@ -52,3 +52,75 @@ export async function getGame(id) {
 
     return await pool.query(query, [id]);
 }
+
+export async function addGame(
+    title,
+    price,
+    quantity,
+    releaseDate = new Date(),
+    developerId,
+    genreId,
+    platformId
+) {
+    const query = `
+    INSERT INTO games 
+    (title, price, stock_quantity, release_date, developer_id, genre_id, platform_id)
+    VALUES
+    ($1, $2, $3, $4, $5, $6, $7);
+    `;
+
+    await pool.query(query, [
+        title,
+        price,
+        quantity,
+        releaseDate,
+        developerId,
+        genreId,
+        platformId,
+    ]);
+}
+
+export async function removeGame(id) {
+    const query = `
+    DELETE FROM games
+    WHERE id = $1;
+    `;
+
+    await pool.query(query, [id]);
+}
+
+export async function updateGame(
+    id,
+    title,
+    price,
+    quantity,
+    releaseDate = new Date(),
+    developerId,
+    genreId,
+    platformId
+) {
+    const query = `
+    UPDATE games
+    SET title = $2,
+        price = $3,
+        quantity = $4,
+        release_date = $5,
+        developer_id = $6,
+        genre_id = $7,
+        platform_id = $8
+    WHERE id = $1;
+    `;
+
+    await pool.query(query, [
+        id,
+        title,
+        price,
+        quantity,
+        releaseDate,
+        developerId,
+        genreId,
+        platformId,
+    ]);
+}
+
+await addGame("Chicken Tenders", 50.99, 5, new Date(), 1, 1, 1);
