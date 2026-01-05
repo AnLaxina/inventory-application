@@ -47,7 +47,7 @@ export async function getGame(id) {
         LEFT JOIN developers ON games.developer_id = developers.id
         LEFT JOIN genres ON games.genre_id = genres.id
         LEFT JOIN platforms on games.platform_id = platforms.id
-        WHERE game.id = $1;
+        WHERE games.id = $1;
     `;
 
     return await pool.query(query, [id]);
@@ -122,5 +122,3 @@ export async function updateGame(
         platformId,
     ]);
 }
-
-await addGame("Chicken Tenders", 50.99, 5, new Date(), 1, 1, 1);
