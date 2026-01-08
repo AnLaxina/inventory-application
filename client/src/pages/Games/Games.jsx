@@ -1,10 +1,12 @@
-import Header from "../../components/Header/Header.jsx";
 import styles from "./games.module.css";
 
 export default function Games() {
     return (
         <section className={styles.games}>
-            <p>Welcome to the Games Section!</p>
+            <h3>Available Games</h3>
+            <div className={styles.gamesContainer}>
+                <p>No games found!</p>
+            </div>
         </section>
     );
 }
