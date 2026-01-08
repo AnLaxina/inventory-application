@@ -1,5 +1,3 @@
-// TODO: Fix the error with react-router.... ugh....
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./assets/css/index.css";
