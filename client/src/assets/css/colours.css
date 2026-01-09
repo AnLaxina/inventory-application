@@ -5,3 +5,8 @@
     --secondary: #382679;
     --accent: #835bcc;
 }
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
