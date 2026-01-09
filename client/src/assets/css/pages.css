@@ -1,0 +1,14 @@
+/* This is global styling that can be shared between the Home, Games, Developers, and Genres pages */
+.section-container {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.page-container {
+    display: grid;
+    align-items: center;
+    min-height: 55vh;
+}
