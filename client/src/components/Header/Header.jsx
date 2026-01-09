@@ -25,7 +25,9 @@ export default function Header({ title }) {
                         </h4>
                     </li>
                     <li>
-                        <h4>Developers</h4>
+                        <h4>
+                            <Link to="/developers">Developers</Link>
+                        </h4>
                     </li>
                     <li>
                         <h4>Genres</h4>
