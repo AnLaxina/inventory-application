@@ -1,0 +1,11 @@
+.button-link {
+    color: var(--text);
+    background-color: var(--secondary);
+    padding: var(--spacing-s);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    filter: brightness(85%);
+}
