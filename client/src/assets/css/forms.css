@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow-y: auto;
+    gap: var(--spacing-m);
+    padding: var(--spacing-m);
+    max-height: 60vh;
+}
+
+form input {
+    padding: var(--spacing-xs);
+}
+
+form button {
+    align-self: center;
+    padding: var(--spacing-s);
+    color: var(--text);
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 10px;
+}
+
+form button:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+}
