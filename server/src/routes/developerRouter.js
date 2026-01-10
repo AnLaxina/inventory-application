@@ -5,5 +5,5 @@ const developerRouter = Router();
 
 developerRouter.get("/", developerController.getAllDevelopers);
 developerRouter.get("/:id", developerController.getDeveloper);
-
+developerRouter.post("/create", developerController.postNewDeveloper);
 export default developerRouter;
