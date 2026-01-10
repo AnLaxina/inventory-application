@@ -1,5 +1,4 @@
 import * as db from "../db/developers.js";
-import Express from "express";
 
 export async function getAllDevelopers(req, res) {
     const { rows } = await db.getAllDevelopers();
@@ -12,6 +11,11 @@ export async function getDeveloper(req, res) {
 }
 
 export async function postNewDeveloper(req, res) {
-    console.log("Post for a new developer!");
-    res.send({ coolGuy: "Chicken" });
+    const formData = req.body;
+
+    db.addDeveloper(
+        formData.developerName,
+        formData.headquarters === "" ? undefined : formData.headquarters
+    );
+    res.end();
 }

@@ -6,9 +6,12 @@ export default function AddDeveloper() {
 
         fetch("http://localhost:3000/developers/create", {
             method: "POST",
+            // This is how to actually "send data" to the backend
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formValues),
         })
-            .then((response) => response.json())
-            .then((data) => console.log(data))
             .catch((error) => console.error(error))
             .finally(() => console.log("Done!"));
     }
