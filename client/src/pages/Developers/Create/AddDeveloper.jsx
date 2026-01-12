@@ -1,19 +1,12 @@
+import api from "../../../api/methods.js";
+
 export default function AddDeveloper() {
-    function submitForm(event) {
+    async function submitForm(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
         const formValues = Object.fromEntries(formData);
 
-        fetch("http://localhost:3000/developers/create", {
-            method: "POST",
-            // This is how to actually "send data" to the backend
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formValues),
-        })
-            .catch((error) => console.error(error))
-            .finally(() => console.log("Done!"));
+        api.post("/developers/create", formValues);
     }
     return (
         <section className="section-container">
