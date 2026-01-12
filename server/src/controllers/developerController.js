@@ -17,5 +17,5 @@ export async function postNewDeveloper(req, res) {
         formData.developerName,
         formData.headquarters === "" ? undefined : formData.headquarters
     );
-    res.send({ message: "Success!" });
+    res.status(201).send({ Message: "Developer added!" });
 }

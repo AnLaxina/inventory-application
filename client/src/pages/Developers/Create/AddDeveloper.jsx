@@ -1,12 +1,16 @@
 import api from "../../../api/methods.js";
+import { useNavigate } from "react-router";
 
 export default function AddDeveloper() {
+    const navigate = useNavigate();
+
     async function submitForm(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
         const formValues = Object.fromEntries(formData);
 
         api.post("/developers/create", formValues);
+        navigate("/developers");
     }
     return (
         <section className="section-container">
