@@ -1,6 +1,5 @@
 import styles from "./header.module.css";
 import { Link } from "react-router";
-import { useRef } from "react";
 
 export default function Header({ title }) {
     function onClick() {
@@ -30,7 +29,9 @@ export default function Header({ title }) {
                         </h4>
                     </li>
                     <li>
-                        <h4>Genres</h4>
+                        <h4>
+                            <Link to="/genres">Genres</Link>
+                        </h4>
                     </li>
                 </ul>
             </nav>
