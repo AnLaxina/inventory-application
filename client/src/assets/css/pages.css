@@ -1,4 +1,12 @@
 /* This is global styling that can be shared between the Home, Games, Developers, and Genres pages */
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    max-width: 100vw;
+}
 .section-container {
     display: flex;
     min-height: 100%;
@@ -10,6 +18,6 @@
 .page-container {
     display: grid;
     overflow: auto;
-    align-items: center;
+    place-items: center;
     max-height: 55vh;
 }

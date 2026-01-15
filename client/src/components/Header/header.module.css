@@ -4,6 +4,7 @@ header {
     align-items: center;
     justify-content: space-around;
     padding: var(--spacing-m);
+    flex-wrap: wrap;
 }
 
 .headerNavigation {
@@ -21,4 +22,18 @@ header {
     color: var(--text);
     text-decoration: underline;
     text-underline-offset: var(--spacing-s);
+}
+
+@media (width <= 640px) {
+    .headerNavigation {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.369rem;
+    }
+
+    h4 {
+        font-size: 1.333rem;
+    }
 }
