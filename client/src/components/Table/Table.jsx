@@ -6,16 +6,30 @@ export default function Table({ data = undefined }) {
         return Object.keys(data[0]);
     }
 
+    function getData() {
+        if (data.length === 0) {
+            return [];
+        }
+
+        return data.map((dataPiece) => Object.values(dataPiece));
+    }
+
     function displayHeads() {
         const rows = getRowNames();
         return rows.map((row) => <th key={row}>{row}</th>);
     }
 
-    function addData() {
-        console.log(getRowNames());
+    function displayBody() {
+        const rows = getData();
+        return rows.map((row) => (
+            <tr key={row[0]}>
+                {row.map((value, index) => {
+                    return <td key={index}>{value}</td>;
+                })}
+            </tr>
+        ));
     }
 
-    // TODO: Next up, time to add the actual data itself!
     return (
         <>
             {!data ? (
@@ -25,6 +39,7 @@ export default function Table({ data = undefined }) {
                     <thead>
                         <tr>{displayHeads()}</tr>
                     </thead>
+                    <tbody>{displayBody()}</tbody>
                 </table>
             )}
         </>
