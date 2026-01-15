@@ -1,0 +1,18 @@
+/* TODO: Style the table bruh */
+table {
+    color: var(--text);
+    border-collapse: collapse;
+    background-color: var(--secondary);
+}
+
+table,
+th,
+td,
+tr {
+    padding: var(--spacing-s);
+    border: 2px solid var(--primary);
+}
+
+td:first-child {
+    text-align: center;
+}

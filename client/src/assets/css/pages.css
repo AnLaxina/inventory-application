@@ -9,6 +9,7 @@
 
 .page-container {
     display: grid;
+    overflow: auto;
     align-items: center;
-    min-height: 55vh;
+    max-height: 55vh;
 }

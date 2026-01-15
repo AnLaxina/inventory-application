@@ -1,3 +1,5 @@
+import "./table.module.css";
+
 export default function Table({ data = undefined }) {
     function getRowNames() {
         if (data.length === 0) {
