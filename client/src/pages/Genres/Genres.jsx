@@ -26,8 +26,8 @@ export default function Genres() {
                     <Table data={genres} />
                 )}
             </div>
-            <Link to="/developers/create" className="button-link">
-                Add Developer
+            <Link to="/genres/create" className="button-link">
+                Add Genres
             </Link>
         </section>
     );

@@ -26,3 +26,7 @@ form button:hover {
     cursor: pointer;
     filter: brightness(85%);
 }
+
+textarea {
+    resize: none;
+}

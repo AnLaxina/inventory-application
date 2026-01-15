@@ -5,6 +5,7 @@ import Games from "../pages/Games/Games.jsx";
 import Developers from "../pages/Developers/Developers.jsx";
 import AddDeveloper from "../pages/Developers/Create/AddDeveloper.jsx";
 import Genres from "../pages/Genres/Genres.jsx";
+import AddGenre from "../pages/Genres/Create/AddGenre.jsx";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
             },
             { path: "developers/create", Component: AddDeveloper },
             { path: "genres", Component: Genres },
+            { path: "genres/create", Component: AddGenre },
         ],
     },
 ]);
